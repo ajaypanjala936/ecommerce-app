@@ -1,0 +1,411 @@
+/* 
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.notifications-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.notifications-container h2 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #28a745;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.error-message {
+  color: #dc3545;
+  background: rgba(255, 235, 235, 0.9);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-container p {
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  text-align: center;
+  color: #555;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.notification-item {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.notification-item.read {
+  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.notification-item.unread {
+  border-left: 4px solid #28a745;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-message-icon {
+  font-size: 2.5rem;
+  color: #28a745;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.notification-details {
+  flex: 1;
+}
+
+.notification-details p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #1a1a1a;
+}
+
+.notification-price {
+  font-weight: 600;
+  color: #28a745;
+}
+
+.notification-timestamp {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #666;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.delete-notification-btn {
+  background: linear-gradient(45deg, #dc3545, #e4606d);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-notification-btn:hover, .delete-notification-btn:focus {
+  background: linear-gradient(45deg, #c82333, #dc3545);
+  transform: rotate(10deg) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+
+.delete-notification-btn:focus {
+  outline: 3px solid #28a745;
+  outline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .notifications-container {
+    padding: 0 1rem;
+  }
+
+  .notifications-container h2 {
+    font-size: clamp(1.5rem, 4.5vw, 1.8rem);
+  }
+
+  .notification-item {
+    padding: 1rem;
+  }
+
+  .notification-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-image, .notification-message-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .delete-notification-btn {
+    align-self: flex-end;
+  }
+
+  .notification-details p {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-container {
+    padding: 0 0.75rem;
+  }
+
+  .notification-item {
+    padding: 0.75rem;
+  }
+
+  .notification-timestamp {
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+  }
+} */
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Notification.css */
+.notifications-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a1a;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.notifications-container h2 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #28a745;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.error-message {
+  color: #dc3545;
+  background: rgba(255, 235, 235, 0.9);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-container p {
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  text-align: center;
+  color: #555;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+}
+
+/* Notifications List */
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.notification-item {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.notification-item.read {
+  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.notification-item.unread {
+  border-left: 4px solid #28a745;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.notification-image, .notification-message-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-message-icon {
+  filter: hue-rotate(90deg) brightness(1.2); /* Adds green tint to align with #28a745 */
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.notification-details {
+  flex: 1;
+}
+
+.notification-details p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  color: #1a1a1a;
+}
+
+.notification-price {
+  font-weight: 600;
+  color: #28a745;
+}
+
+.notification-timestamp {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #666;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.delete-notification-btn {
+  background: linear-gradient(45deg, #dc3545, #e4606d);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.delete-notification-btn:hover, .delete-notification-btn:focus {
+  background: linear-gradient(45deg, #c82333, #dc3545);
+  transform: rotate(10deg) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+/* Accessibility */
+.delete-notification-btn:focus {
+  outline: 3px solid #28a745;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notifications-container {
+    padding: 0 1rem;
+  }
+
+  .notifications-container h2 {
+    font-size: clamp(1.5rem, 4.5vw, 1.8rem);
+  }
+
+  .notification-item {
+    padding: 1rem;
+  }
+
+  .notification-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-image, .notification-message-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .delete-notification-btn {
+    align-self: flex-end;
+  }
+
+  .notification-details p {
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-container {
+    padding: 0 0.75rem;
+  }
+
+  .notification-item {
+    padding: 0.75rem;
+  }
+
+  .notification-timestamp {
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+  }
+}

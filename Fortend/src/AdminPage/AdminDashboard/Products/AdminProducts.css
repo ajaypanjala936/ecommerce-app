@@ -1,0 +1,510 @@
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.ap-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  font-family: 'Inter', Arial, sans-serif;
+  color: #212529;
+  padding: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ap-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.ap-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.ap-filter-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.ap-search-container {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+
+.ap-search-input {
+  width: 70%;
+  padding: 1rem 3rem 1rem 1.2rem;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #212529;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 100px;
+}
+
+.ap-search-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.2);
+}
+
+.ap-clear-search {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.ap-clear-search:hover {
+  color: #343a40;
+}
+
+.ap-filter-select {
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #212529;
+  font-size: 1.1rem;
+  min-width: 50px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ap-filter-select:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.2);
+}
+
+.ap-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.ap-btn-primary {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: #ffffff;
+}
+
+.ap-btn-primary:hover {
+  background: linear-gradient(135deg, #218838, #1a6630);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.3);
+}
+
+.ap-btn-secondary {
+  background: linear-gradient(135deg, #e9ecef, #dee2e6);
+  color: #343a40;
+}
+
+.ap-btn-secondary:hover {
+  background: linear-gradient(135deg, #dee2e6, #ced4da);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ap-btn-view {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.ap-btn-view:hover {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+  transform: translateY(-2px);
+}
+
+.ap-btn-edit {
+  background: linear-gradient(135deg, #ffc107, #e0a800);
+  color: #212529;
+  padding: 0.5rem 1rem;
+}
+
+.ap-btn-edit:hover {
+  background: linear-gradient(135deg, #e0a800, #c69500);
+  transform: translateY(-2px);
+}
+
+.ap-btn-delete {
+  background: linear-gradient(135deg, #dc3545, #b02a37);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.ap-btn-delete:hover {
+  background: linear-gradient(135deg, #b02a37, #8b1c29);
+  transform: translateY(-2px);
+}
+
+.ap-table-responsive {
+  overflow-x: auto;
+}
+
+.ap-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(241, 243, 245, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.ap-table th,
+.ap-table td {
+  padding: 1.2rem;
+  text-align: left;
+  font-size: 1rem;
+  color: #212529;
+}
+
+.ap-table th {
+  background: linear-gradient(135deg, #e9ecef, #dee2e6);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ap-table tr {
+  transition: background 0.3s ease;
+}
+
+.ap-table tbody tr:hover {
+  background: rgba(248, 249, 250, 0.8);
+}
+
+.ap-table.ap-table-empty tbody tr:hover {
+  background: none;
+}
+
+.ap-low-stock {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.ap-action-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.ap-empty-message {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(248, 249, 250, 0.9);
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  color: #6c757d;
+}
+
+.ap-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: #212529;
+}
+
+.ap-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #dee2e6;
+  border-top: 5px solid #28a745;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.ap-error {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(241, 243, 245, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+.ap-error p {
+  color: #dc3545;
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+.ap-retry-btn {
+  background: linear-gradient(135deg, #28a745, #1e7e34);
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ap-retry-btn:hover {
+  background: linear-gradient(135deg, #218838, #1a6630);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(40, 167, 69, 0.3);
+}
+
+.ap-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.ap-modal-content {
+  background: linear-gradient(145deg, #f1f3f5, #e9ecef);
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.ap-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ap-modal-header h3 {
+  font-size: 1.8rem;
+  color: #343a40;
+}
+
+.ap-close-btn {
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.ap-close-btn:hover {
+  color: #343a40;
+}
+
+.ap-add-form,
+.ap-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ap-form-error {
+  color: #dc3545;
+  font-size: 1.1rem;
+  text-align: center;
+  background: rgba(220, 53, 69, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.ap-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ap-form-group label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #343a40;
+}
+
+.ap-form-group input,
+.ap-form-group select,
+.ap-form-group textarea {
+  padding: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #212529;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ap-form-group input:focus,
+.ap-form-group select:focus,
+.ap-form-group textarea:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.2);
+}
+
+.ap-form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.ap-form-group input[type="file"] {
+  padding: 0.5rem;
+}
+
+.ap-file-selected {
+  color: #28a745;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.ap-modal-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ap-container {
+    padding: 2rem;
+  }
+
+  .ap-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ap-filter-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .ap-search-container,
+  .ap-filter-select {
+    min-width: 100%;
+  }
+
+  .ap-table th,
+  .ap-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .ap-action-buttons {
+    gap: 0.5rem;
+  }
+
+  .ap-btn-view,
+  .ap-btn-edit,
+  .ap-btn-delete {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .ap-modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ap-container {
+    padding: 1.5rem;
+  }
+
+  .ap-container h2 {
+    font-size: 2rem;
+  }
+
+  .ap-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .ap-table th,
+  .ap-table td {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .ap-action-buttons {
+    gap: 0.4rem;
+  }
+
+  .ap-btn-view,
+  .ap-btn-edit,
+  .ap-btn-delete {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .ap-modal-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .ap-form-group label {
+    font-size: 1rem;
+  }
+
+  .ap-form-group input,
+  .ap-form-group select,
+  .ap-form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .ap-filter-select {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}

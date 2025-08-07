@@ -1,0 +1,74 @@
+/* PrivacyPolicy.css */
+.privacy-policy-container {
+    max-width: 896px; /* Equivalent to Tailwind's max-w-4xl */
+    margin: 2rem auto; /* Centered with vertical spacing */
+    padding: 1.5rem; /* Internal padding */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 0.5rem; /* Rounded corners */
+  }
+  
+  .privacy-policy-container h1 {
+    font-size: 1.875rem; /* 30px, like text-3xl */
+    font-weight: 700; /* Bold */
+    color: #1f2937; /* Gray-800 */
+    margin-bottom: 1.5rem; /* Spacing below */
+    text-align: center;
+  }
+  
+  .privacy-policy-container p {
+    color: #4b5563; /* Gray-600 */
+    font-size: 1rem; /* 16px */
+    line-height: 1.5; /* Readable line height */
+    margin-bottom: 1rem;
+  }
+  
+  .privacy-policy-container section {
+    margin-bottom: 1.5rem; /* Spacing between sections */
+  }
+  
+  .privacy-policy-container h2 {
+    font-size: 1.5rem; /* 24px, like text-2xl */
+    font-weight: 600; /* Semibold */
+    color: #374151; /* Gray-700 */
+    margin-bottom: 0.75rem; /* Spacing below */
+  }
+  
+  .privacy-policy-container ul {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 1.5rem; /* Indent */
+  }
+  
+  .privacy-policy-container ul li {
+    color: #4b5563; /* Gray-600 */
+    margin-bottom: 0.5rem; /* Spacing between items */
+  }
+  
+  .privacy-policy-container ul li strong {
+    font-weight: 600; /* Semibold for emphasis */
+  }
+  
+  .privacy-policy-container a {
+    color: #2563eb; /* Blue-600 */
+    text-decoration: none;
+  }
+  
+  .privacy-policy-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 640px) {
+    .privacy-policy-container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .privacy-policy-container h1 {
+      font-size: 1.5rem; /* Smaller on mobile */
+    }
+  
+    .privacy-policy-container h2 {
+      font-size: 1.25rem;
+    }
+  }
